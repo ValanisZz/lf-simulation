@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import gnureadline
+# import gnureadline
 import socket
 
 from algorithms import MainApi
@@ -14,7 +14,6 @@ if __name__ == "__main__":
     ######################################
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    M = MainApi()
 
     try:
         sock.connect(('localhost', 10000))
@@ -23,6 +22,7 @@ if __name__ == "__main__":
     except Exception as e:
         print("- Error, server is not available")
         print(f"REASON: {e}")
+        sock.close()
         exit(1)
         
     M = MainApi(sock)

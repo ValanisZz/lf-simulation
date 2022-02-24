@@ -62,18 +62,18 @@ def get_queue(shares):
     """
 
     # Defining catsizes matching the MSE-limit
-    #amount = 1  # starting amount
-    #lim = 0.03  # MSE-limit
-    #while True:
-        #error = 0
-        #catsizes = get_sizes(shares, amount)
-        #for cs, w in zip(catsizes, shares):
-            #error += (cs / amount - w) ** 2
-        #error = m.sqrt(error / 4)
-        #if error > lim:
-            #amount += 1
-        #else:
-            #break
+    # amount = 1  # starting amount
+    # lim = 0.03  # MSE-limit
+    # while True:
+        # error = 0
+        # catsizes = get_sizes(shares, amount)
+        # for cs, w in zip(catsizes, shares):
+            # error += (cs / amount - w) ** 2
+        # error = m.sqrt(error / 4)
+        # if error > lim:
+            # amount += 1
+        # else:
+            # break
     
     # Defining catsizes matching fixed amount
     catsizes = get_sizes(shares, 8)

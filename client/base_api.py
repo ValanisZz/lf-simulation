@@ -1,4 +1,4 @@
-from modbus.post_threading import Post
+from post_threading import Post
 
 from contextlib import closing
 from psycopg2 import connect
